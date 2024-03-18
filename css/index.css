@@ -1,22 +1,22 @@
 .container {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 3fr 3fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: (3,1fr);
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "Header Header Header Header Header Header"
-      "Header Header Header Header Header Header"
-      "Main Main Main Main Main Main"
-      "Footer Footer Footer Footer Footer Footer";
+      "Header"
+      "Main"
+      "Footer";
   }
   
 
-header { grid-area: Header; }
-  
-main { grid-area: Main; }
+.head { grid-area: Header; }
 
-footer { grid-area: Footer;}
+.main { grid-area: Main;}
+
+.foot { grid-area: Footer;}
+
   
 
 body, html {
@@ -28,12 +28,13 @@ body, html {
 /* CSS Header */
 
 header {
+    height: 100vh; /* Ajustez cette valeur selon vos besoins */
     width: 100%;
-    height: 100%;
     background-image: url("../images/header.jpg");
     background-size: cover;
     background-position: center;
 }
+
 
 /* CSS Nav */
 
@@ -134,12 +135,10 @@ footer a:hover{
 }
 
 footer ul li {
+    list-style-type: none;
     padding-bottom: 10px;
 }
 
-.footer-information ul{
-    list-style-type: none;
-}
 
 
 .footer-contact {
@@ -147,7 +146,6 @@ footer ul li {
 }
 
 .footer-contact ul{
-    list-style-type: circle;
     margin-top: 12%;
 }
 
@@ -165,23 +163,68 @@ footer ul li {
 }
 
 
+/* CSS Main */
+
+.main-container {  display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(7,1fr);
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . mainTitre mainTitre . ."
+      ". Film1 . . Film2 ."
+      ". Film3 . . Film4 ."
+      ". Film5 . . Film6 ."
+      ". Film7 . . Film8 ."
+      ". Film9 . . Film10 ."
+      ". Film11 . . Film12 .";
+}
+
+.main-titre {grid-area: mainTitre;}
+.film-1 {grid-area: Film1;}
+.film-2 {grid-area: Film2;}
+.film-3 {grid-area: Film3;}
+.film-4 {grid-area: Film4;}
+.film-5 {grid-area: Film5;}
+.film-6 {grid-area: Film6;}
+.film-7 {grid-area: Film7;}
+.film-8 {grid-area: Film8;}
+.film-9 {grid-area: Film9;}
+.film-10 {grid-area: Film10;}
+.film-11 {grid-area: Film11;}
+.film-12 {grid-area: Film12;} 
+
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    
+}
+
+.main a img {
+    max-width: 110%;
+    padding-bottom: 100px;
+}
+
+.main h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.main a {
+    transition: transform .2s;
+}
+
+.main a:hover{
+    transform: scale(1.1);
+}
+
+
 
 
 
 @media screen and (max-width: 768px) {
-
-    .container {  display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr 3fr 1fr 1fr;
-        grid-auto-columns: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "Header"
-          "Header"
-          "Main"
-          "Footer";
-      }
 
     /* CSS Nav */
 
@@ -206,4 +249,31 @@ footer ul li {
     footer{
         font-size: 40%;
     }
+
+    /* CSS Main */
+
+    .main-container {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(13,1fr);
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". mainTitre ."
+          ". Film1 ."
+          ". Film2 ."
+          ". Film3 ."
+          ". Film4 ."
+          ". Film5 ."
+          ". Film6 ."
+          ". Film7 ."
+          ". Film8 ."
+          ". Film9 ." 
+          ". Film10 ."
+          ". Film11 ."
+          ". Film12 .";
+}
+
+
+
 }
