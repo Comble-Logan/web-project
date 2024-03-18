@@ -134,13 +134,21 @@ footer a:hover{
 }
 
 footer ul li {
-    list-style-type: none;
     padding-bottom: 10px;
+}
+
+.footer-information ul{
+    list-style-type: none;
 }
 
 
 .footer-contact {
     grid-area: footer-contact;
+}
+
+.footer-contact ul{
+    list-style-type: circle;
+    margin-top: 12%;
 }
 
 .footer-information {
@@ -155,6 +163,7 @@ footer ul li {
     grid-area: footer-copyrights;
     background-color: #373634;
 }
+
 
 
 
