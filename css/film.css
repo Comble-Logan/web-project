@@ -106,10 +106,10 @@ nav a:hover:after{
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      ". footer-contact . footer-information ."
-      ". footer-contact . footer-information ."
-      ". footer-contact . footer-information ."
-      "footer-copyrights footer-copyrights footer-copyrights footer-copyrights footer-copyrights";
+    ". footer-contact . footer-information ."
+    ". footer-contact . footer-information ."
+    ". footer-contact . footer-information ."
+    "footer-copyrights footer-copyrights footer-copyrights footer-copyrights footer-copyrights";
 }
 
 footer {
@@ -172,11 +172,11 @@ footer ul li {
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      ". .  mainTitre mainTitre mainTitre . ."
-      ". Film1 . Film2 . Film3 ."
-      ". Film4 . Film5 . Film6 ."
-      ". Film7 . Film8 . Film9 ."
-      ". Film10 . Film11 . Film12 .";
+    ". .  mainTitre mainTitre mainTitre . ."
+    ". Film1 . Film2 . Film3 ."
+    ". Film4 . Film5 . Film6 ."
+    ". Film7 . Film8 . Film9 ."
+    ". Film10 . Film11 . Film12 .";
 }
 
 
