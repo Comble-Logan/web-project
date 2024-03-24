@@ -179,10 +179,6 @@ footer ul li {
     ". Film10 . Film11 . Film12 .";
 }
 
-
-
-
-
 .main{
     width: 100%;
     height: 100%;
@@ -191,7 +187,57 @@ footer ul li {
     background-repeat: no-repeat;
 }
 
+#banner {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px; /* largeur maximale de la vidéo */
+    margin: auto;
+}
 
+#banner video {
+    width: 100%;
+    height: auto;
+}
+
+
+#film-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: start;
+    padding: 20px;
+    text-align: justify;
+    font-size: 25px; 
+}
+
+.poster img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+#calendar {
+    display: grid;
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px; 
+}
+
+#calendar h2 {
+    margin-bottom: 20px;
+}
+
+#calendar table {
+    margin: auto;
+    text-align: left;
+}
+
+#calendar td {
+    padding: 10px;
+}
 
 
 
@@ -235,3 +281,12 @@ footer ul li {
 
 
     /* CSS Main */
+
+    main {
+        font-size: 16px; 
+    }
+
+    #calendar {
+        font-size: 16px; 
+    }
+}
