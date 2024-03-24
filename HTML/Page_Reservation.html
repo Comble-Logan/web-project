@@ -18,16 +18,51 @@
             </ul>
         </nav>
 
-    </header>
+    </header> 
     <main>
-    <div class="formulaire">
-
-    </div>
-    <div class="image-film">
-
-    </div>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                }
+                form {
+                    margin: 0 auto;
+                    width: 300px;
+                }
+                label, input, select {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                input[type="submit"] {
+                    margin-top: 20px;
+                }
+            </style>
+        </head>
+        <body>
+            <img src="../images/Affiches/Affiche-Avatar.jpg" class="image-film" alt="Description de l'image">
+            <form>
+                <label for="time">Heure :</label>
+                <input type="time" id="time" name="time">
+    
+                <label for="status">Tarification :</label>
+                <select id="status" name="status">
+                    <option value="student">Étudiant(e)</option>
+                    <option value="adult">Adulte plein tarif (+14)</option>
+                    <option value="child">Enfants (-14)</option>
+                </select>
+    
+                <label for="quantity">Nombre de personnes :</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10">
+    
+                <input type="submit" value="Paiement">
+            </form>
+        </body>
+        </html>
+        
     </main>
-    <footer class="foot">
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-contact">
                 <h3> Nous contacter : </h3>
