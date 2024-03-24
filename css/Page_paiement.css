@@ -175,70 +175,45 @@ footer ul li {
     background-color: #373634;
 }
 
-
-body {
-    font-family: Arial, sans-serif;
+.body {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
 }
-.main form {
-    left: 10%;
-    margin: 0 auto;
+.commentaire {
+    margin-bottom: 20px;
+}
+.paiement {
+    flex-grow: 1;
+}
+.carte {
     width: 300px;
+    height: 200px;
+    background: lightgray;
+    margin-left: 20px;
 }
-.main label, .main input, .main select {
-    display: block;
-    margin-bottom: 10px;
-}
-.main input[type="submit"] {
+.conditions {
     margin-top: 20px;
 }
 
-.image-film{
-    width: 25%;
+
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
 }
 
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-          
-        }
-        .image-film {
-            display : flex;
-            flex: 1;
-            padding-right: 50px;
-        }
-        .image-film img {
-            width: 100%;
-            height: auto;
-        }
-        .form-container {
-            display: flex;
-            flex: 1;
-        }
-        .main form {
-            display: block;
-            margin: 0 auto;
-            width: 300px;
-        }
-        .main label, .main input, .main select {
-            display: block;
-            margin-bottom: 10px;
-        }
-        .main input[type="submit"] {
-            margin-top: 20px;
-        }
-        .main{
-            background-color: #f0e0c6 ;
-        }
-        
+.container2 {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-align: center;
+    place-items: center;
+}

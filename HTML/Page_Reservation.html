@@ -40,11 +40,15 @@
                 }
             </style>
         </head>
-        <body>
+        <body class="container2">
             <img src="../images/Affiches/Affiche-Avatar.jpg" class="image-film" alt="Description de l'image">
             <form>
                 <label for="time">Heure :</label>
-                <input type="time" id="time" name="time">
+                <select id="time" name="time">
+                    <option value="14h30">14:30</option>
+                    <option value="16h00">16:00</option>
+                    <option value="17h30">17:30</option>
+                </select>
     
                 <label for="status">Tarification :</label>
                 <select id="status" name="status">
@@ -56,7 +60,7 @@
                 <label for="quantity">Nombre de personnes :</label>
                 <input type="number" id="quantity" name="quantity" min="1" max="10">
     
-                <input type="submit" value="Paiement">
+                <input type="submit" value="Paiement" href="../HTML/Page_paiement.html">
             </form>
         </body>
         </html>
