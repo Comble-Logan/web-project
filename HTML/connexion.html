@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="profil" content="Mentions légales">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Esteban DA-SILVA">
+    <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
+    <link rel="stylesheet" type="text/css" href="../css/profil.css">
+    <title>Le Septième Art</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../images/logo.png" alt="Logo nav" class="nav-logo">
+            <h1 class="nav-name"> Le Septième Art </h1>
+            <ul>
+                <li class="nav-acceuil-page"> <a href="../index.html">Accueil</a> </li>
+                <li class="nav-contact-page"> <a href="#">Contact</a> </li>
+                <li class="nav-connect-page"> <a href="#">Connexion / Inscription</a> </li>
+            </ul>
+        </nav>
+
+    </header>
+    
+    <main>
+        <h1>Connexion</h1>
+    <form id="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+        <button type="submit">Se connecter</button>
+    </form>
+    <p>Pas de compte ? <a href="#" id="signup-link">Inscris-toi</a></p>
+    <div id="signup-container" class="hidden">
+        <h2>Inscription</h2>
+        <form id="signup-form">
+            <label for="first-name">Prénom:</label>
+            <input type="text" id="first-name" name="first-name" required>
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email-signup">Email:</label>
+            <input type="email" id="email-signup" name="email-signup" required>
+            <label for="password-signup">Mot de passe:</label>
+            <input type="password" id="password-signup" minlength="8" required>
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h3> Nous contacter : </h3>
+                <ul>
+                    <li> Email : contact@leseptiemeart.com</li>
+                    <li> Tel : 03 27 12 48 19</li>
+                </ul>
+            </div>
+
+            <div class="footer-information">
+                <h3> Informations : </h3>
+                <ul>
+                    <li><a href="html/Mentions_Legales.html"> Mentions Légales </a></li>
+                    <li><a href="html/CGU.html"> Conditions d'Utilisation du site internet </a></li>
+                    <li><a href="html/CGV.html"> Conditions Générales de Vente </a></li>
+                    <li><a href="html/PPDP.html"> Politique de protection des données personnelles </a></li>
+                </ul>
+            </div>
+
+            <div class="footer-copyrights">
+                <p>&copy; 1979 - 2024 Le Septième Art. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
