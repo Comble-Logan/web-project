@@ -7,14 +7,14 @@
         <meta name="keywords" content="star, wars, science-fiction, cinema, septième, art, films, retro"> <!-- Mots-clés référencement-->
         <meta name="author" content="Audrey Vasseur">
         <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
-        <link rel="stylesheet" type="text/css" href="css/film.css">
+        <link rel="stylesheet" type="text/css" href="../css/film.css">
         <title>Dune</title>
     </head>
 
     <body class="container">
         <header id="head">
             <nav class="nav">
-                <img src="images/logo.png" alt="Logo nav" class="nav-logo">
+                <img src="../images/logo.png" alt="Logo nav" class="nav-logo">
                 <h1 class="nav-name"> Le Septième Art </h1>
                 <ul>
                     <li class="nav-acceuil-page"> <a href="#">Accueil</a> </li>
@@ -26,12 +26,57 @@
         </header>
 	<body>
         <main>
-
-
-
-
-
-
+                <!-- Vidéo -->
+            <section id="banner">
+                <video autoplay muted loop>
+                    <source src="../videos/Dune.mp4" type="video/mp4">
+                </video>
+            </section>
+            
+                <!-- Détails du film -->
+                <section id="film-details">
+                    <div class="poster">
+                        <img src="../images/Affiches/Affiche-Dune.jpg" alt="Affiche du film">
+                    </div>
+                    <div class="info">
+                        <h2>DUNE</h2>
+                        <p> 
+                            L’histoire se déroule dans un futur lointain, en l’an 10191. L’Épice, une substance permettant de voyager
+                            dans l’espace, est la plus convoitée de l’univers et ne se trouve qu’en un seul endroit : Arrakis, aussi
+                            appelée “Dune”. La famille Atréides est envoyée sur cette planète afin de remplacer les Harkonnens. Paul,
+                            le fils du duc, et sa mère Jessica rencontrent les Fremen, les habitants indigènes de Dune qui attendent
+                            un messie. Paul pourrait-il être celui-ci ?
+                        </p>
+                        
+                        <br>
+                        <h3>Réalisateur & Acteurs</h3>
+                        <p>David Lynch, Kyle MacLachlan, Patrick Stewart, Sean Young,
+                            Sting, Francesca Annis
+                        </p>                      
+                    </div>
+                </section>
+            
+                <!-- Calendrier des séances -->
+                <section id="calendar">
+                    <h2>Calendrier des séances</h2>
+                    <table>
+                        <tr>
+                            <td>Lundi</td>
+                            <td>17:15</td>
+                            <td>19:45</td>
+                        </tr>
+                        <tr>
+                            <td>Mardi</td>
+                            <td>10:45</td>
+                            <td>14:25</td>
+                            <td>18:15</td>
+                        </tr>
+                        <tr>
+                            <td>Mercredi</td>
+                            <td>16:00</td>
+                        </tr>
+                    </table> 
+                </section>          
 
         </main>
         <footer class="foot">
