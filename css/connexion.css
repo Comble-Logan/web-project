@@ -1,94 +1,28 @@
-main {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../images/main_background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  form {
-    max-width: 200px;
-  }
-  
-  p * {
-    display: block;
-  }
-  
-  input#mail {
-    appearance: none;
-    width: 100%;
-    border: 1px solid #333;
+body{  
     margin: 0;
-    font-family: inherit;
-    font-size: 90%;
-    box-sizing: border-box;
-  }
-  
-  /* This is our style for the invalid fields */
-  input.invalid {
-    border-color: #900;
-    background-color: #fdd;
-  }
-  
-  input:focus:invalid {
-    outline: none;
-  }
-  
-  /* This is the style of our error messages */
-  .error {
-    width: 100%;
     padding: 0;
-    font-size: 80%;
-    color: white;
-    background-color: #900;
-    border-radius: 0 0 5px 5px;
-    box-sizing: border-box;
-  }
-  
-  .error.active {
-    padding: 0.3em;
-  }
-  
-  .hidden {
-    display: none;
-  }
-
-  .container {  display: grid;
+    height: 100%;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: (3,1fr);
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "Header"
-      "Main"
-      "Footer";
-  }
-  
-
-head { grid-area: Header; }
-
-main { grid-area: Main;}
-
+        "Header"
+        "Main"
+        "Footer";
+    }
 footer { grid-area: Footer;}
-
-  
-
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+header { grid-area: Header;}
 
 /* CSS Header */
 
-header {
-    height: 100vh; /* Ajustez cette valeur selon vos besoins */
-    width: 100%;
+/* header {
     background-image: url("../images/header.jpg");
     background-size: cover;
     background-position: center;
-}
+} */
 
 
 /* CSS Nav */
@@ -97,10 +31,6 @@ nav {
     display: flex;
     justify-content: space-around;
     font-size: 110%;
-}
-
-
-nav {
     background-color: #6F4229;
     color: white;
     align-items: center;
@@ -152,7 +82,8 @@ nav a:hover:after{
 
 /* CSS Footer */
 
-.footer-container {  display: grid;
+footer{  
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-auto-columns: 1fr;
@@ -247,33 +178,53 @@ footer ul li {
         font-size: 40%;
     }
 
-    /* CSS Main */
+}
 
-    main {
-        background-color: #f0e0c6;
-        background-image: none;
-    }
 
-    .main-container {  display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.7fr repeat(6,1fr);
-        grid-auto-columns: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          ". mainTitre mainTitre mainTitre ."
-          ". Film1 . Film2 ."
-          ". Film3 . Film4 ."
-          ". Film5 . Film6 ."
-          ". Film7 . Film8 ."
-          ". Film9 . Film10 ."
-          ". Film11 . Film12 .";
-    
-    }
+main{
+    grid-area: Main;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../images/main_background.jpg');
+}
 
-    .main h1{
-        white-space: nowrap;
-        font-size: 150%;
-    }
-
+.wrapper{
+    background-color: #ba744ef7;
+    color: #ffffff;
+    margin: 5%;
+    padding: 5%;
+    border-radius: 30px;
+}
+.wrapper h1{
+    font-size: medium;
+    text-align: center;
+}
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input-box input{
+    width: auto;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ffffff;
+}
+.input-box input::placeholder{
+    color: #ffffff;
+}
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px
 }

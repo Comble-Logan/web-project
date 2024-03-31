@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="profil" content="Mentions légales">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Esteban DA-SILVA">
     <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
-    <link rel="stylesheet" type="text/css" href="../css/profil.css">
+    <link rel="stylesheet" type="text/css" href="../css/connexion.css">
     <title>Le Septième Art</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -20,19 +21,34 @@
                 <li class="nav-connect-page"> <a href="#">Connexion / Inscription</a> </li>
             </ul>
         </nav>
-
     </header>
     
     <main>
-        <h1>Connexion</h1>
-    <form id="login-form">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="password">Mot de passe:</label>
-        <input type="password" id="password" name="password" minlength="8" required>
-        <button type="submit">Se connecter</button>
+        <div class="wrapper">
+            <form action="">
+                <h1>Connexion</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Identifiant"required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Mot de passe"required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Se rappeler de moi</label>
+                </div>
+
+                <button type="submit" class="btn">Se connecter</button>
+
+                <div class="inscrire">
+                    <p><a href="#">S'inscrire</a></p>
+                </div>
+            </form>
+        </div>
     </form>
-    <p>Pas de compte ? <a href="#" id="signup-link">Inscris-toi</a></p>
+    <!-- <p>Pas de compte ? <a href="#" id="signup-link">Inscris-toi</a></p>
     <div id="signup-container" class="hidden">
         <h2>Inscription</h2>
         <form id="signup-form">
@@ -46,12 +62,11 @@
             <input type="password" id="password-signup" minlength="8" required>
             <button type="submit">S'inscrire</button>
         </form>
-    </div>
+    </div> -->
     </main>
 
 
     <footer>
-        <div class="footer-container">
             <div class="footer-contact">
                 <h3> Nous contacter : </h3>
                 <ul>
@@ -63,17 +78,16 @@
             <div class="footer-information">
                 <h3> Informations : </h3>
                 <ul>
-                    <li><a href="html/Mentions_Legales.html"> Mentions Légales </a></li>
-                    <li><a href="html/CGU.html"> Conditions d'Utilisation du site internet </a></li>
-                    <li><a href="html/CGV.html"> Conditions Générales de Vente </a></li>
-                    <li><a href="html/PPDP.html"> Politique de protection des données personnelles </a></li>
+                    <li><a href="../HTML/Mentions_Legales.html"> Mentions Légales </a></li>
+                    <li><a href="../HTML/CGU.html"> Conditions d'Utilisation du site internet </a></li>
+                    <li><a href="../HTML/CGV.html"> Conditions Générales de Vente </a></li>
+                    <li><a href="../HTML/PPDP.html"> Politique de protection des données personnelles </a></li>
                 </ul>
             </div>
 
             <div class="footer-copyrights">
                 <p>&copy; 1979 - 2024 Le Septième Art. All rights reserved.</p>
             </div>
-        </div>
     </footer>
 
 </body>
