@@ -178,6 +178,10 @@ footer ul li {
         font-size: 40%;
     }
 
+    main{
+        min-height: 150vh;
+    }
+
 }
 
 
@@ -187,7 +191,6 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../images/main_background.jpg');
 }
 
@@ -207,9 +210,10 @@ main{
     width: 100%;
     height: 50px;
     margin: 30px 0;
+    justify-items: center;
 }
 .input-box input{
-    width: auto;
+    width: 100%;
     height: 100%;
     background: transparent;
     outline: none;
@@ -217,14 +221,57 @@ main{
     border-radius: 40px;
     font-size: 16px;
     color: #ffffff;
+    padding-left: 5%;
 }
 .input-box input::placeholder{
     color: #ffffff;
 }
 .input-box i {
     position: absolute;
-    right: 20px;
+    right: 5%;
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px
+}
+.wrapper .remember{
+    font-size: medium;
+    margin: 5% 0 5%;
+    width: 100%;
+}
+.remember label input{
+    accent-color: #fff;
+    margin: 2%;
+}
+.remember a {
+    color: #fff;
+    text-decoration: none;
+}
+.remember a:hover{
+    text-decoration: underline;
+}
+.wrapper .btn{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 40px;
+    background: #fff;
+    outline: none;
+    box-shadow: #551010e5;
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+}
+.wrapper .inscrire{
+    font-size: 14 px;
+    text-align: center;
+    margin-top: 5%;
+}
+.inscrire p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.inscrire p a:hover{
+    text-decoration: underline;
 }
