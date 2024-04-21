@@ -368,9 +368,6 @@ footer ul li {
         font-size: 35px;
      }
 
-    .calendrier { 
-        grid-area: calendrier-séances;
-    }
 
     #calendar {
         grid-area: calendrier-séances;
