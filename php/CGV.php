@@ -9,20 +9,9 @@
         <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
         <link rel="stylesheet" type="text/css" href="../css/informations.css">
         <title>Le Septième Art</title>
-    </head>
-    <body class="container">
-        <header id="head">
-            <nav class="nav">
-                <img src="../images/logo.png" alt="Logo nav" class="nav-logo">
-                <h1 class="nav-name"> Le Septième Art </h1>
-                <ul>
-                    <li class="nav-acceuil-page"> <a href="../index.html">Accueil</a> </li>
-                    <li class="nav-contact-page"> <a href="#">Contact</a> </li>
-                    <li class="nav-connect-page"> <a href="#">Connexion / Inscription</a> </li>
-                </ul>
-            </nav>
-
-        </header>
+    <?php
+        include 'header.php';
+    ?>
         
         <main class="main">
             <div class="main-container">
