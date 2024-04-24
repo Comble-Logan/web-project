@@ -1,9 +1,9 @@
 <?php
     if(isset($isIndex)){
-        $chemin_ML = '/php/Mentions_Legales.php';
-        $chemin_CGU = '/php/CGU.php';
-        $chemin_CGV = '/php/CGV.php';
-        $chemin_PPDP = '/php/PPDP.php';
+        $chemin_ML = 'php/Mentions_Legales.php';
+        $chemin_CGU = 'php/CGU.php';
+        $chemin_CGV = 'php/CGV.php';
+        $chemin_PPDP = 'php/PPDP.php';
     } else {
         $chemin_ML = 'Mentions_Legales.php';
         $chemin_CGU = 'CGU.php';

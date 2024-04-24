@@ -3,14 +3,14 @@
 
     if(isset($isIndex)){
         // Chemins CSS
-        $chemin_header_css = '/css/header.css';
-        $chemin_footer_css = '/css/footer.css';
+        $chemin_header_css = 'css/header.css';
+        $chemin_footer_css = 'css/footer.css';
         // Chemin image 
-        $chemin_image = '/images/logo.png';
+        $chemin_image = 'images/logo.png';
         // Chemins redirections
         $chemin_accueil = '#';
-        $chemin_contact = '/php/Page_Suggestion.php';
-        $chemin_session = '/php/connexion.php';
+        $chemin_contact = 'php/Page_Suggestion.php';
+        $chemin_session = 'php/connexion.php';
         
     } else {
         // Chemins CSS
