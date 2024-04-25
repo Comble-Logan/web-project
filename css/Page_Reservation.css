@@ -242,3 +242,46 @@ body {
             background-color: #f0e0c6 ;
         }
         
+        .container2{
+            position: relative;
+            position: relative;
+            top: 30%;
+            left:60%;
+            transform: translate(20%, 20%);
+            border: 1px solid #000; /* Ajoute une bordure */
+            border-radius: 10px; /* Rend la bordure arrondie */
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Ajoute un effet d'ombre */
+            padding: 20px; /* Ajoute de l'espace entre le texte interne et la bordure */
+            /* Le reste de vos styles */
+        }
+        
+        
+        .formulaire {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(160%, -90%);
+            border: 1px solid #000; /* Ajoute une bordure */
+            border-radius: 10px; /* Rend la bordure arrondie */
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Ajoute un effet d'ombre */
+            padding: 20px; /* Ajoute de l'espace entre le texte interne et la bordure */
+            /* Le reste de vos styles */
+        }
+        
+        
+
+        @media screen and (max-width: 768px) {
+            .main {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                grid-template-areas:
+                    "image-film"
+                    "formulaire"
+                    "formulaire";
+            }
+            .formulaire, .image-film {
+                position: static;
+                transform: none;
+            }
+        }
+        
