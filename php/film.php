@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="Film" content="Page Dune">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="star, wars, science-fiction, cinema, septième, art, films, retro"> <!-- Mots-clés référencement-->
+        <meta name="keywords" content="dune, espace, science-fiction, cinema, septième, art, films, retro"> <!-- Mots-clés référencement-->
         <meta name="author" content="Audrey Vasseur">
         <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
         <link rel="stylesheet" type="text/css" href="../css/film.css">
