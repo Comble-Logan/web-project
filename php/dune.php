@@ -9,10 +9,9 @@
         <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
         <link rel="stylesheet" type="text/css" href="../css/film.css">
         <title>Dune</title>
-    </head>
+    
 
         <?php
-            $isIndex = true;
             include 'header.php';
         ?>
 
@@ -77,8 +76,7 @@
 
         </main>
         <?php
-            $isIndex = true;
-            include 'php/footer.php';
+            include 'footer.php';
         ?>
     </body>
 </html>
