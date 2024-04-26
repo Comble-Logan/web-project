@@ -1,4 +1,9 @@
 <?php
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 // Configuration
 $servername = 'localhost';
 $username = 'root';
@@ -11,6 +16,10 @@ try {
     echo 'Erreur : '. $e->getMessage();
 }
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> b5b64fba7e163f21783620e17971293977a38dff
+>>>>>>> Stashed changes
 if (isset($_POST['login'])) {
     $user_id = $_POST['user_id'];
     $password = $_POST['password'];

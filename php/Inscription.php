@@ -9,8 +9,17 @@
     <link rel="stylesheet" type="text/css" href="../css/connexion.css">
     <title>Le Septième Art</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<<<<<<< Updated upstream
 </head>
 <body>
+=======
+<<<<<<< HEAD
+
+=======
+</head>
+<body>
+>>>>>>> b5b64fba7e163f21783620e17971293977a38dff
+>>>>>>> Stashed changes
     <?php
         include 'header.php';
     ?>
