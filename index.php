@@ -19,19 +19,19 @@
             <div class="main-container">
                 <h1 class="main-titre">Nos films :</h1>
 
-                <a href="#" class="film-1"><img src="images/Affiches/Affiche-LaGrandeVadrouille.jpg" alt="Affiche La Grande Vadrouille"></a>
-                <a href="#" class="film-2"><img src="images/Affiches/Affiche-LaSeptiemeCompagnie.jpg" alt="Affiche La 7ème compagnie"></a>
-                <a href="#" class="film-3"><img src="images/Affiches/Affiche-Rocky.jpg" alt="Affiche Rocky"></a>
-                <a href="#" class="film-4"><img src="images/Affiches/Affiche-Starwars.jpg" alt="Affiche Star Wars La Guerre Des Etoiles"></a>
-                <a href="#" class="film-5"><img src="images/Affiches/Affiche-TheShining.jpg" alt="Affiche The Shining"></a>
-                <a href="#" class="film-6"><img src="images/Affiches/Affiche-Troie.jpg" alt="Affiche Troie"></a>
+                <a href="php/film.php?film=Test" class="film-1"><img src="images/Affiches/Affiche-LaGrandeVadrouille.jpg" alt="Affiche La Grande Vadrouille"></a>
+                <a href="php/film.php?film=Test2" class="film-2"><img src="images/Affiches/Affiche-LaSeptiemeCompagnie.jpg" alt="Affiche La 7ème compagnie"></a>
+                <a href="php/film.php?film=Test3" class="film-3"><img src="images/Affiches/Affiche-Rocky.jpg" alt="Affiche Rocky"></a>
+                <a href="php/film.php?film=Test4" class="film-4"><img src="images/Affiches/Affiche-Starwars.jpg" alt="Affiche Star Wars La Guerre Des Etoiles"></a>
+                <a href="php/film.php?film=Test5" class="film-5"><img src="images/Affiches/Affiche-TheShining.jpg" alt="Affiche The Shining"></a>
+                <a href="php/film.php?film=Test6" class="film-6"><img src="images/Affiches/Affiche-Troie.jpg" alt="Affiche Troie"></a>
 
-                <a href="#" class="film-7"><img src="images/Affiches/Affiche-Avatar.jpg" alt="Affiche Avatar"></a>
-                <a href="HTML/dune.html" class="film-8"><img src="images/Affiches/Affiche-Dune.jpg" alt="Affiche Dune (1984)"></a>
-                <a href="#" class="film-9"><img src="images/Affiches/Affiche-LeSeigneurDesAnneaux.jpg" alt="Affiche Le Seigneur Des Anneaux"></a>
-                <a href="#" class="film-10"><img src="images/Affiches/Affiche-Spiderman.jpg" alt="Affiche Spiderman (2005)"></a>
-                <a href="#" class="film-11"><img src="images/Affiches/Affiche-Terminator.jpg" alt="Affiche Terminator"></a>
-                <a href="#" class="film-12"><img src="images/Affiches/Affiche-RetourVersLeFutur.jpg" alt="Affiche Retour Vers Le Futur"></a>
+                <a href="php/film.php?film=Test" class="film-7"><img src="images/Affiches/Affiche-Avatar.jpg" alt="Affiche Avatar"></a>
+                <a href="php/film.php?film=Test" class="film-8"><img src="images/Affiches/Affiche-Dune.jpg" alt="Affiche Dune (1984)"></a>
+                <a href="php/film.php?film=Test" class="film-9"><img src="images/Affiches/Affiche-LeSeigneurDesAnneaux.jpg" alt="Affiche Le Seigneur Des Anneaux"></a>
+                <a href="php/film.php?film=Test" class="film-10"><img src="images/Affiches/Affiche-Spiderman.jpg" alt="Affiche Spiderman (2005)"></a>
+                <a href="php/film.php?film=Test" class="film-11"><img src="images/Affiches/Affiche-Terminator.jpg" alt="Affiche Terminator"></a>
+                <a href="php/film.php?film=Test" class="film-12"><img src="images/Affiches/Affiche-RetourVersLeFutur.jpg" alt="Affiche Retour Vers Le Futur"></a>
             </div>
         </main>
 
