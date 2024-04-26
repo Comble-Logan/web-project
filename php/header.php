@@ -3,7 +3,7 @@
 
     if(isset($isIndex)){
         // Chemins CSS
-        $chemin_header_css = 'css/header.css';
+        $chemin_header_css = 'css/headerIndex.css';
         $chemin_footer_css = 'css/footer.css';
         // Chemin image 
         $chemin_image = 'images/logo.png';
