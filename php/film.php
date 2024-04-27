@@ -37,9 +37,7 @@
             <div class="contain">
                 <!-- Vidéo -->
                 <div class="video">  
-                    <video autoplay muted loop>
-                        <iframe width="853" height="480" src="https://www.youtube.com/embed/04aw2ymZedw" title="Dune (1984) Bande-annonce française VF" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
-                    </video>
+                    <iframe src="<?php echo $film['trailer']; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
                 </div>
                 <!-- Détails du film -->
                 <div class="Tableau">
