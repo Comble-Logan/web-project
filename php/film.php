@@ -37,7 +37,7 @@
             <div class="contain">
                 <!-- Vidéo -->
                 <div class="video">  
-                    <iframe src="<?php echo $film['trailer']; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+                    <iframe src="<?php echo $film['trailer']; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen width="100%" height="550px"></iframe>  
                 </div>
                 <!-- Détails du film -->
                 <div class="Tableau">
