@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    // Récupération de l'ID du film depuis l'URL ou une autre source
+    $film_id = $_GET['id'];
+
+    // Récupération des détails du film depuis la base de données
+    $req = $conn->prepare("SELECT * FROM movies WHERE id = ?");
+    $req->execute([$film_id]);
+    $film = $req->fetch(PDO::FETCH_ASSOC);
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -7,7 +21,7 @@
         <meta name="keywords" content="star, wars, science-fiction, cinema, septième, art, films, retro"> <!-- Mots-clés référencement-->
         <meta name="author" content="Audrey Vasseur">
         <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
-        <link rel="stylesheet" type="text/css" href="../css/film.css">
+        <link rel="stylesheet" type="text/css" href="film.css">
         <title>Dune</title>
     </head>
     
@@ -26,26 +40,20 @@
                 <!-- Détails du film -->
                 <div class="Tableau">
                     <div class="poster">
-                        <img src="../images/Affiches/Affiche-Dune.jpg" alt="Affiche du film">
+                        <img src="<?php echo $film['affiche']; ?>" alt="Affiche du film">
                     </div>
                 </div>
                 <div class="info-1">
-                    <h2>DUNE</h2>
-                        <p> 
-                            L’histoire se déroule dans un futur lointain, en l’an 10191. L’Épice, une substance permettant de voyager
-                            dans l’espace, est la plus convoitée de l’univers et ne se trouve qu’en un seul endroit : Arrakis, aussi
-                            appelée “Dune”. La famille Atréides est envoyée sur cette planète afin de remplacer les Harkonnens. Paul,
-                            le fils du duc, et sa mère Jessica rencontrent les Fremen, les habitants indigènes de Dune qui attendent
-                            un messie. Paul pourrait-il être celui-ci ?
-                        </p>
+                    <h2><?php echo $film['name']; ?></h2>
+                        <p><?php echo $film['synopsis']; ?></p>
                 </div>
                 <br>
                 <div class="info-2">
                     <h3>Réalisateur :</h3>
-                        <p>David Lynch</p>
+                        <p><?php echo $film['directors']; ?></p>
                     <br>
                     <h3>Acteurs :</h3>
-                        <p>Kyle MacLachlan, Patrick Stewart, Sean Young, Sting, Francesca Annis</p>
+                        <p><?php echo $film['actors']; ?></p>
                         <br>
                     <h3>Durée du film : 2h17</h3>
                 </div>
