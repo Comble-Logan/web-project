@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="Film" content="Page Dune">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="dune, espace, science-fiction, cinema, septième, art, films, retro"> <!-- Mots-clés référencement-->
+        <meta name="keywords" content="star, wars, science-fiction, cinema, septième, art, films, retro"> <!-- Mots-clés référencement-->
         <meta name="author" content="Audrey Vasseur">
         <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
         <link rel="stylesheet" type="text/css" href="../css/film.css">
         <title>Dune</title>
+    </head>
     
-
         <?php
             include 'header.php';
         ?>
-
+    
         <main>
             <div class="contain">
                 <!-- Vidéo -->
@@ -50,28 +50,23 @@
                     <h3>Durée du film : 2h17</h3>
                 </div>
             
+                
                 <!-- Calendrier des séances -->
                 <div class="calendrier">
-                <section id="calendar">
-                    <h2>Calendrier des séances</h2>
-                    <table>
-                        <tr>
-                            <td>Lundi : 17:15<br>(fin 19:40)<br>Salle 8</td>
-                            <td>Mardi : 10:45<br>(fin 12:55)<br>Salle 10</td>
-                            <td>Mardi : 18:15<br>(fin 20:35)<br>Salle 2</td>
-                            <td>Mercredi : 16:00<br>(fin 18:30)<br>Salle 5</td>
-                        </tr>
-                        <tr>
-                            <td>Vendredi : 16:00<br>(fin 18:30)<br>Salle 1</td>
-                            <td>Samedi : 10:45<br>(fin 12:55)<br>Salle 4</td>
-                            <td>Samedi : 18:15<br>(fin 20:35)<br>Salle 1</td>
-                            <td>Dimanche : 15:00<br>(fin 17:20)<br>Salle 5</td>
-
-                        </tr>
-                    </table> 
-                </section>
+                    <section id="calendar">
+                        <h2>Calendrier des séances</h2>
+                        <div class="seance">
+                            <div class="bloc">Lundi : 17:15<br>(fin 19:40)<br>Salle 8</div>
+                            <div class="bloc">Mardi : 10:45<br>(fin 12:55)<br>Salle 10</div>
+                            <div class="bloc">Mardi : 18:15<br>(fin 20:35)<br>Salle 2</div>
+                            <div class="bloc">Mercredi : 16:00<br>(fin 18:30)<br>Salle 5</div>
+                            <div class="bloc">Vendredi : 16:00<br>(fin 18:30)<br>Salle 1</div>
+                            <div class="bloc">Samedi : 10:45<br>(fin 12:55)<br>Salle 4</div>
+                            <div class="bloc">Samedi : 18:15<br>(fin 20:35)<br>Salle 1</div>
+                            <div class="bloc">Dimanche : 15:00<br>(fin 17:20)<br>Salle 5</div>
+                        </div>
+                    </section>
                 </div>
-                <br>
             </div>       
 
         </main>
