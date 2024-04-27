@@ -26,7 +26,7 @@
         <meta name="keywords" content="star, wars, science-fiction, cinema, septième, art, films, retro"> <!-- Mots-clés référencement-->
         <meta name="author" content="Audrey Vasseur">
         <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
-        <link rel="stylesheet" type="text/css" href="../film.css">
+        <link rel="stylesheet" type="text/css" href="../css/film.css">
         <title>Dune</title>
     </head>
     
