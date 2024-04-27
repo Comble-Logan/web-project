@@ -21,7 +21,7 @@
         <meta name="keywords" content="star, wars, science-fiction, cinema, septième, art, films, retro"> <!-- Mots-clés référencement-->
         <meta name="author" content="Audrey Vasseur">
         <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
-        <link rel="stylesheet" type="text/css" href="film.css">
+        <link rel="stylesheet" type="text/css" href="../film.css">
         <title>Dune</title>
     </head>
     
@@ -55,7 +55,7 @@
                     <h3>Acteurs :</h3>
                         <p><?php echo $film['actors']; ?></p>
                         <br>
-                    <h3>Durée du film : 2h17</h3>
+                    <h3>Durée du film : <?php echo $film['duration']; ?></h3>
                 </div>
             
                 
