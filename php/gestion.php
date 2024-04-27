@@ -64,6 +64,10 @@
 				<label>Nombre de places :</label>
 				<input type="number" name="NbPlaces" required>
 
+				<br><br>
+				<label>Numéro de la salle :</label>
+				<input type="number" name="numSalle" required>
+
                 <br><br>
 				<input type="submit" name="ajout" value="Ajouter"/>
 			</fieldset>
@@ -77,13 +81,14 @@
 					$movieId= $_POST['film'];//récuperer l'id du film
 					$datetime= $_POST['date']; // récupère la date de la séance
 					$places= $_POST['NbPlaces'];//récuperer le nombre de place de la séance
+					$salle= $_POST['numSalle'];
 
 					$dateParts = explode('T', $datetime);
 					$date = $dateParts[0];
 					$time = $dateParts[1];
 											
-					$reqSQL= "INSERT INTO screenings (movie_id, date, hourly, remaining_tickets, spectators)
-							VALUES (:id, :date, :hourly, :remaining_tickets, :spectators)";
+					$reqSQL= "INSERT INTO screenings (movie_id, date, hourly, remaining_tickets, spectators, salle)
+							VALUES (:id, :date, :hourly, :remaining_tickets, :spectators, :salle)";
 					//préparer et exécuter la requête
 					$req = $conn->prepare($reqSQL);
 
@@ -93,7 +98,8 @@
 										':date' => $date,
 										':hourly' => $time,
 										':remaining_tickets' => $places,
-										':spectators' => 0,));
+										':spectators' => 0,
+										'salle' => $salle));
 					$conn = null;//Fermer la connexion
 					header("Location:gestion.php");
 				}                
@@ -109,7 +115,7 @@
 			try{	
 				//Ouvrir la connexion à la BDD 
 				require("connBDD.php"); 			
-				$reqSQL= "SELECT s.screening_id, m.name, s.date, s.hourly FROM screenings s JOIN movies m ON s.movie_id = m.movie_id;"; 
+				$reqSQL= "SELECT s.screening_id, m.name, s.date, s.hourly, s.salle FROM screenings s JOIN movies m ON s.movie_id = m.movie_id;"; 
 				//préparer, exécuter la requête et récuperer le résultat
 				$reqSeance = $conn->prepare($reqSQL);
 				$reqSeance->execute();
@@ -141,7 +147,7 @@
 
                     	// Si la séance n'a pas encore eu lieu
                     	if ($seanceTimestamp > $currentTime) {
-								echo "<option value='$Seance[0]'>$Seance[1] - $Seance[2] - $Seance[3]</option>";
+								echo "<option value='$Seance[0]'>$Seance[1] - $Seance[2] - $Seance[3] - Salle n°$Seance[4]</option>";
 						}
               	    }
             	?>
