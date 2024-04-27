@@ -28,7 +28,6 @@
         <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
         <link rel="stylesheet" type="text/css" href="../css/film.css">
         <title>Dune</title>
-    </head>
     
         <?php
             include 'header.php';
@@ -45,7 +44,7 @@
                 <!-- Détails du film -->
                 <div class="Tableau">
                     <div class="poster">
-                        <img src="<?php echo $film['affiche']; ?>" alt="Affiche du film">
+                        <img src="<?php echo $film['poster']; ?>" alt="Affiche du film">
                     </div>
                 </div>
                 <div class="info-1">
