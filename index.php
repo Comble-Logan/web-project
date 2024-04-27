@@ -31,7 +31,7 @@
                 <a href="php/film.php?film=Test6" class="film-6"><img src="images/Affiches/Affiche-Troie.jpg" alt="Affiche Troie"></a>
 
                 <a href="php/film.php?film=Test" class="film-7"><img src="images/Affiches/Affiche-Avatar.jpg" alt="Affiche Avatar"></a>
-                <a href="php/film.php?film=Test" class="film-8"><img src="images/Affiches/Affiche-Dune.jpg" alt="Affiche Dune (1984)"></a>
+                <a href="php/film.php?id=1" class="film-8"><img src="images/Affiches/Affiche-Dune.jpg" alt="Affiche Dune (1984)"></a>
                 <a href="php/film.php?film=Test" class="film-9"><img src="images/Affiches/Affiche-LeSeigneurDesAnneaux.jpg" alt="Affiche Le Seigneur Des Anneaux"></a>
                 <a href="php/film.php?film=Test" class="film-10"><img src="images/Affiches/Affiche-Spiderman.jpg" alt="Affiche Spiderman (2005)"></a>
                 <a href="php/film.php?film=Test" class="film-11"><img src="images/Affiches/Affiche-Terminator.jpg" alt="Affiche Terminator"></a>

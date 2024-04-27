@@ -1,10 +1,15 @@
 <?php
-    session_start();
+    require 'connBDD.php';
+
     // Récupération de l'ID du film depuis l'URL ou une autre source
     $film_id = $_GET['id'];
 
+    if (!isset($_GET['id'])) {
+        die('ID du film non spécifié');
+    }
+
     // Récupération des détails du film depuis la base de données
-    $req = $conn->prepare("SELECT * FROM movies WHERE id = ?");
+    $req = $conn->prepare("SELECT * FROM movies WHERE movie_id = ?");
     $req->execute([$film_id]);
     $film = $req->fetch(PDO::FETCH_ASSOC);
 ?>
