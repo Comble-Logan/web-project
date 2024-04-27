@@ -1,9 +1,7 @@
 <?php 
-
-	//Exercice 2 : QUESTION 4	
-	//session_start(); //Démarrer la session
+	session_start(); //Démarrer la session
 	//if (!isset($_SESSION['admin']) && !$_SESSION['admin']) { // si l'utilisateur n'est pas authentifié ou n'est pas admin
-	//			// => redirection vers la page d'authentification TP5.php
+	//			// => redirection vers la page index
 	//	header("Location:../index.php");
 	//}
 	//si l'utilisateur est un adminstrateur ==> On affiche la page
