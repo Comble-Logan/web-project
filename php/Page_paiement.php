@@ -38,11 +38,11 @@
         
     </div>
 
+
+    </main>
     <?php
         include 'footer.php';
         ?>
-    </main>
-    
 
 </body>
 </html>
