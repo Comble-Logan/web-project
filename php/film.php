@@ -14,9 +14,6 @@
     $film = $req->fetch(PDO::FETCH_ASSOC);
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -66,14 +63,25 @@
                     <section id="calendar">
                         <h2>Calendrier des séances</h2>
                         <div class="seance">
-                            <div class="bloc">Lundi : 17:15<br>(fin 19:40)<br>Salle 8</div>
-                            <div class="bloc">Mardi : 10:45<br>(fin 12:55)<br>Salle 10</div>
-                            <div class="bloc">Mardi : 18:15<br>(fin 20:35)<br>Salle 2</div>
-                            <div class="bloc">Mercredi : 16:00<br>(fin 18:30)<br>Salle 5</div>
-                            <div class="bloc">Vendredi : 16:00<br>(fin 18:30)<br>Salle 1</div>
-                            <div class="bloc">Samedi : 10:45<br>(fin 12:55)<br>Salle 4</div>
-                            <div class="bloc">Samedi : 18:15<br>(fin 20:35)<br>Salle 1</div>
-                            <div class="bloc">Dimanche : 15:00<br>(fin 17:20)<br>Salle 5</div>
+                            <?php
+                                date_default_timezone_set('Europe/Paris');
+                                // Obtention de la date actuelle
+                                $currentTime = time();
+
+                                // Préparez la requête SQL
+                                $request = "SELECT * FROM screenings WHERE date >= CURDATE() ORDER BY date ASC";
+                                $req = $conn->prepare($request);
+                                $req->execute();
+
+                                // On parcourt chaque ligne
+                                while ($row = $req->fetch()) {
+                                    echo '<div class="bloc">';
+                                    echo "Date : " . $row["date"] . "<br>";
+                                    echo "Heure : " . $row["hourly"] . "<br>";
+                                    echo "Salle : " . $row["salle"];
+                                    echo "</div><br>";  
+                                }
+                            ?> 
                         </div>
                     </section>
                 </div>
