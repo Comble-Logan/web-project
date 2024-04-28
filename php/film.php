@@ -64,6 +64,12 @@
                 <div class="calendrier">
                     <section id="calendar">
                         <h2>Calendrier des séances</h2>
+                            <h3>
+                                <?php if (!isset($_SESSION['connected'])) {
+                                    echo "Veuillez vous connecter pour réserver.";
+                                }
+                                ?>
+                            </h3>
                         <div class="seance">
                             <?php
                                 date_default_timezone_set('Europe/Paris');
@@ -85,6 +91,7 @@
                                         // Si c'est le cas, on redirige vers la page de réservation
                                         echo '<a href="' . $url . '">';
                                     }
+                                    
 
                                     echo '<div class="bloc">';
                                     setlocale(LC_TIME, 'fr_FR.utf8','fra'); 
@@ -95,8 +102,6 @@
 
                                     if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) {
                                         echo '</a>';
-                                    }else{
-                                        header('Location: connexion.php');
                                     }
                                 }  
                             ?>
