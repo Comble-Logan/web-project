@@ -75,6 +75,10 @@
 
                                 // On parcourt chaque ligne
                                 while ($row = $req->fetch()) {
+                                    // Redirection vers la page de réservation correspondante
+                                    $url = "Page_Reservation.php?idf=" . $row["movie_id"] . "&ids=" . $row["screening_id"];
+                                    echo '<a href="' . $url . '">';
+
                                     echo '<div class="bloc">';
                                     setlocale(LC_TIME, 'fr_FR.utf8','fra'); 
                                     echo strftime("%A %d %B", strtotime($row["date"])) . "<br>";  // affichage du jour 
