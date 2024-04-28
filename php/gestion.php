@@ -21,7 +21,7 @@
             include 'header.php';
         ?>
 		
-		<main>
+		<main class= "main">
 
         <h2 class="welcome">Bienvenue sur le panel administrateur !</h2>
 
