@@ -65,7 +65,7 @@
                     <section id="calendar">
                         <h2>Calendrier des séances</h2>
                         <h3>
-                            <?php if($_SESSION['connected'] != true){
+                            <?php if(!isset($_SESSION['connected'])){
                                 echo "Vous n'êtes pas connecté !";}
                             ?>
                         </h3>
