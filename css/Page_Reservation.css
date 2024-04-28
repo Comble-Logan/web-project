@@ -45,6 +45,7 @@
      max-height:400px
 }
 .global {
+    background-color: #f0e0c6;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -57,6 +58,7 @@ body,html {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #f0e0c6;
 }
 
 .bouton2 {
@@ -79,11 +81,14 @@ body,html {
     align-items: center;
     justify-content: center;
     width: auto;
+    background-color: #ffffff;
 }
 
 .film-details{
     width: 200%;
 }
+
+
         
 
         @media screen and (max-width: 768px) {
@@ -102,3 +107,4 @@ body,html {
         }
         
 
+        

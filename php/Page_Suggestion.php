@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,16 +11,14 @@
 
     <main>
         <div class="container2">
-            <h1>Votre avis sur notre cinéma <br></h1>
+            <h1>Nous contacter <br></h1>
             <form>
                 <label for="nom">Votre nom:</label><br>
                 <input type="text" id="nom" name="nom"><br>
                 <label for="email">Votre email:</label><br>
                 <input type="email" id="email" name="email"><br>
-                <label for="avis">Votre avis:</label><br>
-                <textarea id="avis" name="avis"></textarea><br>
-                <label for="suggestions">Vos suggestions:</label><br>
-                <textarea id="suggestions" name="suggestions"></textarea><br>
+                <label for="message">votre message:</label><br>
+                <textarea id="message" name="message"></textarea><br>
                 <input type="submit" value="Envoyer">
             </form>
         </div>
