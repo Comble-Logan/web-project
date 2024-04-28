@@ -25,8 +25,11 @@
             $reqUser = $conn->prepare($reqSQL);
             $reqUser->execute([$_SESSION['user_id']]);
             $user = $reqUser->fetch(PDO::FETCH_ASSOC);
-            ;
 
+            $reqSQLMovies= "SELECT m.movie_id, m.name, m.poster FROM vieweds v INNER JOIN movies m ON v.movie_id = m.movie_id WHERE v.user_id = ? ORDER BY v.date DESC LIMIT 6;"; 
+            $reqMovies = $conn->prepare($reqSQL);
+            $reqMovies->execute([$_SESSION['user_id']]);
+            $Movies = $reqMovies->fetchAll(PDO::FETCH_ASSOC);
             //Fermer la connexion
             $conn = null;
         }
@@ -62,12 +65,13 @@
             <h2>Fimls Précedement Réservés :</h2>
 
             <div class="lastMovies">
-                <img src="../images/grey.jpg" alt="Films précédemment réservés">
-                <img src="../images/grey.jpg" alt="Films précédemment réservés">
-                <img src="../images/grey.jpg" alt="Films précédemment réservés">
-                <img src="../images/grey.jpg" alt="Films précédemment réservés">
-                <img src="../images/grey.jpg" alt="Films précédemment réservés">
-                <img src="../images/grey.jpg" alt="Films précédemment réservés">
+                <?php
+                    if (count($Movies) > 0) {
+                        foreach ($Movies as $movie) {
+                            echo "<img src=\"{$movie['poster']}\" alt=\"Films précédemment réservés\">";
+                        }
+                    } 
+                ?>
             </div>
 
             <br>
