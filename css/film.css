@@ -108,6 +108,11 @@ body, html {
     text-decoration: none;
 }
 
+#calendar .bloc:link{
+    text-decoration: none;
+    color:white;
+}
+
 #calendar .bloc:visited{
     text-decoration: none;
     color:white;
@@ -204,6 +209,11 @@ body, html {
         margin: 2.5%; /* Ajoute une marge autour des blocs pour créer un espace entre eux */  
         font-size: 20px;
         text-decoration: none;
+    }
+
+    #calendar .bloc:link{
+        text-decoration: none;
+        color:white;
     }
 
     #calendar .bloc:visited{
