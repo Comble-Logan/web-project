@@ -8,34 +8,44 @@
     <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
     <link rel="stylesheet" type="text/css" href="../css/profil.css">
     <title>Le Septième Art</title>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 
     <?php
+        include 'header.php';
+        include 'connBDD.php';
+
+
+        $sql_prenom = "SELECT name FROM users";
+        $prenom = $conn->prepare($sql_prenom);
+        $prenom->execute();
+        $name = $prenom->fetch();
+
+        $sql_nom = "SELECT surname FROM users";
+        $nom = $conn->prepare($sql_nom);
+        $nom->execute();
+        $surname = $nom->fetch();
+
+        $sql_email = "SELECT email FROM users";
+        $email = $conn->prepare($sql_email);
+        $email->execute();
+        $email = $email->fetch();
+
+        $sql_bd = "SELECT birth_date FROM users";
+        $bd = $conn->prepare($sql_bd);
+        $bd->execute();
+        $bd = $bd->fetch();
+
         session_start();
-        include 'header.php';
+        $_SESSION['name'] = $name['name'];
+        $_SESSION['surname'] = $surname['surname'];
+        $_SESSION['email'] = $email['email'];
+        $_SESSION['birth-date'] = $bd['birth_date'];
    ?>
-=======
->>>>>>> Stashed changes
-</head>
-<body>
-    <?php
-        include 'header.php';
-    ?>
-<<<<<<< Updated upstream
-=======
->>>>>>> b5b64fba7e163f21783620e17971293977a38dff
->>>>>>> Stashed changes
     
     <main>
         <div class="wrapper">
             <h1>Profil</h1>
             <div class="info-container">
                 <h3 class="info-label">Prénom:</h3>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
                 <span class="info-value"><?php echo $_SESSION['name'];?></span>
             </div>
             <div class="info-container">
@@ -54,44 +64,15 @@
 
             <h2>Films Réservés :</h2>
             </br><h2>Fimls Précedement Réservés :</h2>
-=======
->>>>>>> Stashed changes
-                <span class="info-value">...</span>
-            </div>
-            <div class="info-container">
-                <h3 class="info-label">Nom:</h3>
-                <span class="info-value">...</span>
-            </div>
-            <div class="info-container">
-                <h3 class="info-label">Adresse Mail:</h3>
-                <span class="info-value">...</span>
-            </div>
-            <h2>Films Réservés :</h2>
-                <a href="#" class="film-3"><img src="../images/Affiches/Affiche-Rocky.jpg" alt="Affiche Rocky"></a>
-            <h2>Fimls Précedement Réservés :</h2>
-                <a href="#" class="film-1"><img src="images/Affiches/Affiche-LaGrandeVadrouille.jpg" alt="Affiche La Grande Vadrouille"></a>
-                <a href="#" class="film-2"><img src="images/Affiches/Affiche-LaSeptiemeCompagnie.jpg" alt="Affiche La 7ème compagnie"></a>
-            
-<<<<<<< Updated upstream
-=======
->>>>>>> b5b64fba7e163f21783620e17971293977a38dff
->>>>>>> Stashed changes
+
             <br>
-            <button type="submit" class="btn">Changer de Mot de passe</button>
+            <button type="submit" class="btn" >Changer de Mot de passe</button>
         </div>
     </main>
 
     <?php
             include 'footer.php';
-<<<<<<< Updated upstream
-        ?>
-=======
-<<<<<<< HEAD
-       ?>
-=======
-        ?>
->>>>>>> b5b64fba7e163f21783620e17971293977a38dff
->>>>>>> Stashed changes
 
+        ?>
 </body>
 </html>

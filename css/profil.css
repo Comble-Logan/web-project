@@ -17,8 +17,10 @@ main a img {
 .wrapper{
     background-color: #f0e0c6;
     color: #000000;
-    margin: 5%;
     padding: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
     border-radius: 30px;
 }
 .wrapper h1{
@@ -46,4 +48,3 @@ main a img {
 h3{
     width: 15%;
 }
-

@@ -9,17 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/connexion.css">
     <title>Le Septième Art</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<<<<<<< Updated upstream
-</head>
-<body>
-=======
-<<<<<<< HEAD
 
-=======
-</head>
-<body>
->>>>>>> b5b64fba7e163f21783620e17971293977a38dff
->>>>>>> Stashed changes
     <?php
         include 'header.php';
     ?>
@@ -28,40 +18,39 @@
         <div class="wrapper">
             <form action="submit.php" method="post">
                 <h1>Inscription</h1>
-                <div for="user_id" class="input-box">
-                    <input type="text" placeholder="Identifiant"required>
+                <div class="input-box">
+                    <label for="user_id"></label>
+                    <input type="text" id="user_id" name="user_id" placeholder="Identifiant" required>
                     <i class='bx bxs-user'></i>
                 </div>
-                <div for="password" class="input-box">
-                    <input type="password" placeholder="Mot de passe"required>
+                <div class="input-box">
+                    <label for="password"></label>
+                    <input type="password" id="password" name="password" placeholder="Mot de passe" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
 
-                <div for="email" class="input-box">
-                    <input type="text" placeholder="email"required>
+                <div class="input-box">
+                    <label for="email"></label>
+                    <input type="text" id="email" name="email" placeholder="Email" required>
                 </div>
 
-                <div for="birth_date" class="input-box">
-                    <input type="date" placeholder="birth-date"required>
+                <div class="input-box">
+                    <label for="birth_date"></label>
+                    <input type="date" id="birth_date" name="birth_date" placeholder="birth-date" required>
                 </div>
 
-                <div for="name" class="input-box">
-                    <input type="text" placeholder="Name">
+                <div class="input-box">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Name">
                 </div>
 
-                <div for="surname" class="input-box">
-                    <input type="text" placeholder="Surname">
-                </div>
-
-                <div class="remember">
-                    <label><input type="checkbox">Se rappeler de moi</label>
+                <div class="input-box">
+                    <label for="surname"></label>
+                    <input type="text" id="surname" name="surname" placeholder="Surname">
                 </div>
 
                 <button type="submit" value="M'inscrire" class="btn" name="ok">S'inscrire</button>
-
-            </form>
-        </div>
-    </form>
+</form>
     </main>
 
 

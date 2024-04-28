@@ -10,6 +10,7 @@
         // Chemins redirections
         $chemin_accueil = '#';
         $chemin_contact = 'php/Page_Suggestion.php';
+        $chemin_profil = 'php/Profil.php';
         $chemin_session = 'php/connexion.php';
         
     } else {
@@ -21,8 +22,8 @@
         // Chemins redirections
         $chemin_accueil = '../index.php';
         $chemin_contact = 'Page_Suggestion.php';
-        $chemin_session = 'connexion.php';
-    }
+        $chemin_profil = 'Profil.php';
+        $chemin_session = 'connexion.php';}
 ?>
 
     <link rel="stylesheet" type="text/css" href="<?php echo $chemin_header_css; ?>">
@@ -36,7 +37,13 @@
             <ul>
                 <li class="nav-acceuil-page"> <a href="<?php echo $chemin_accueil; ?>">Accueil</a> </li>
                 <li class="nav-contact-page"> <a href="<?php echo $chemin_contact; ?>">Contact</a> </li>
-                <li class="nav-connect-page"> <a href="<?php echo $chemin_session; ?>">Connexion / Inscription</a> </li>
+                <li class="nav-connect-page"> <a href="<?php
+                    if (!empty($_SESSION['user_id'])) {
+                        echo $chemin_session;
+                    } else {
+                        echo $chemin_profil;
+                    }
+                ?>">Profil</a> </li>
             </ul>
         </nav>
     </header>
