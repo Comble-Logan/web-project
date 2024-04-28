@@ -76,9 +76,10 @@
                                 // On parcourt chaque ligne
                                 while ($row = $req->fetch()) {
                                     echo '<div class="bloc">';
-                                    echo "Date : " . $row["date"] . "<br>";
-                                    echo "Heure : " . $row["hourly"] . "<br>";
-                                    echo "Salle : " . $row["salle"];
+                                    setlocale(LC_TIME, 'fr_FR.utf8','fra'); 
+                                    echo strftime("%A %d %B", strtotime($row["date"])) . "<br>";  // affichage du jour 
+                                    echo date('H:i', strtotime($row["hourly"])) . "<br>";  // affichage de l'heure (sans les secondes)
+                                    echo "Salle " . $row["salle"];  // affichage du numéro de la salle
                                     echo "</div><br>";  
                                 }
                             ?> 
