@@ -81,6 +81,9 @@
                     </form>
                     <?php
                     if(isset($_POST["paiement"])){
+                        $status = floatval($_POST['status']); // Convertit la chaîne en nombre à virgule flottante
+                        $quantity = intval($_POST['quantity']); // Convertit la chaîne en entier
+                        $price = $status * $quantity;
                         $NBplace = $_POST["quantity"];
                         if($NBplace< $seance["remaining_tickets"]){
                             $_SESSION["NBplace"] = $NBplace;

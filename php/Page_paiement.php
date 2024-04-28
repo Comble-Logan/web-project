@@ -81,9 +81,7 @@
                 $reqSQL4 = $conn->prepare($reqSQL3);
                 $reqSQL4->execute([$NBplace,$id_seance]);
                 
-                $reqSQL5 = "UPDATE screenings SET remaining_tickets = remaining_tickets - ? WHERE screening_id = ?";
-                $reqSQL6 = $conn->prepare($reqSQL6);
-                $reqSQL6->execute([$NBplace,$id_seance]);
+  
                 $conn = null; 
 
                 header('location:profil.php');
