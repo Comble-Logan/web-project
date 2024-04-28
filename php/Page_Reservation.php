@@ -12,10 +12,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+
+    
     <link rel="stylesheet" type="text/css" href="../css/Page_Reservation.css">
-</head>
-<body>
-    <div class="container3">
         <?php
             include 'header.php';
             
@@ -44,18 +44,18 @@
                         die("Erreur : " . $e->getMessage());
                     }
                     ?>
-                    <img src="<?php echo($film['poster']) ?>" class="image-film" alt="Description de l'image">
-                    <h2><?php echo($film['name']) ?></h2>
-                    <p><?php echo($film['synopsis']) ?></p>
-                    <p>durée :<?php echo($film['duration']) ?></p>
-                    <p>numéro de salle : <?php echo( $seance['salle']) ?></p>
+                    <pre> <img src="<?php echo($film['poster']) ?>" class="image-film" alt="Description de l'image"> </pre> 
+                    <pre> <h2><?php echo($film['name']) ?></h2></pre> 
+                    <p>&ensp;&ensp; <?php echo($film['synopsis']) ?></p>
+                    <pre>  Durée :<?php echo($film['duration']) ?></pre>
+                    <pre>  Numéro de salle : <?php echo( $seance['salle']) ?></pre>
                     
                 </div>
                 <div class="formulaire">
                     <form method="post" action="">
                     <p>date : <?php echo( $seance['date']) ?></p>
                     <p>heure : <?php echo( $seance['hourly']) ?></p>
-                        <br>
+                         <br>
                         <label for="status">Tarification :</label>
                         <select id="status" name="status">
                             <option value="5">Étudiant(e)</option>
@@ -92,7 +92,7 @@
 
                         }
                         else{
-                            echo ("<p style='color: red;'>Le nombre de place est trop élevé face au nombre de places restantes</p>") ;
+                            echo ("<p style='color: red;'>Le nombre de place est trop élevés face au nombre place restantes</p>") ;
                         }
                     }
                     ?>
@@ -104,6 +104,6 @@
         <?php
             include 'footer.php';
         ?>
-    </div>
+   
 </body>
 </html>

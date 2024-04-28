@@ -13,6 +13,7 @@
  .head { grid-area: header; }
   
   
+  
   .main {  display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -28,12 +29,9 @@
 
   .formulaire { grid-area: formulaire; }
   
-  
-  
-  .footer { grid-area: footer; }
+  .footer { grid-area: footer;}
   
   body, html {
-    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -41,8 +39,8 @@
 
 
 .image-film{
-    max-width:300px;
-     max-height:400px
+    max-width:200px;
+     max-height:300px
 }
 .global {
     background-color: #f0e0c6;
@@ -55,9 +53,6 @@
 
 
 body,html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
     background-color: #f0e0c6;
 }
 
@@ -83,6 +78,7 @@ body,html {
     width: auto;
     background-color: #ffffff;
 }
+
 
 .film-details{
     width: 200%;
