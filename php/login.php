@@ -1,19 +1,28 @@
 <?php
-include 'connBDD.php';
+    session_start();
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $user_id = $_POST['user_id'];
-    $password = $_POST['password'];
-    if ($user_id != "" && $password != ""){
-        $req = $conn->query("SELECT * FROM users WHERE user_id = '$user_id' AND password = '$password' ");
-        $rep = $req->fetch();
-        if ($rep['user_id'] != false){
-            header('Location: Profil.php');
-        }
-        else{
-            echo "Identifiant ou mot de passe incorrect";
-        }
-    }
-}
+	
+        //Ouvrir la connexion à la BDD 
+        require("connBDD.php"); 	
+        $user_email = $_POST['user_id'];
+        $password = $_POST['password'];
 
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $user_id = $_POST['user_id'];
+            $password = $_POST['password'];
+            if ($user_id != "" && $password != ""){
+                $req = $conn->query("SELECT * FROM users WHERE email = '$user_email' AND password = '$password' ");
+                $rep = $req->fetch();
+
+                if ($rep){
+                    $_SESSION['connected'] = true;
+                    $_SESSION['user_id'] = $rep['user_id'];
+                    $_SESSION['isAdmin'] = $rep['isAdmin'];
+                    header("Location:../index.php");
+                }
+                else{
+                    echo "<p style='color: red;'>Identifiant ou mot de passe incorrect</p>" ;
+                }
+            }
+        }
 ?>

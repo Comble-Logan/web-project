@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    setlocale(LC_TIME, 'fr_FR');
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,34 +16,26 @@
 
     <?php
         include 'header.php';
-        include 'connBDD.php';
 
+        try{	
+            //Ouvrir la connexion à la BDD 
+            require("connBDD.php"); 			
+            $reqSQL= "SELECT name, surname, email, birth_date FROM users where user_id = ?"; 
+            //préparer, exécuter la requête et récuperer le résultat
+            $reqUser = $conn->prepare($reqSQL);
+            $reqUser->execute([$_SESSION['user_id']]);
+            $user = $reqUser->fetch(PDO::FETCH_ASSOC);
+            ;
 
-        $sql_prenom = "SELECT name FROM users";
-        $prenom = $conn->prepare($sql_prenom);
-        $prenom->execute();
-        $name = $prenom->fetch();
+            //Fermer la connexion
+            $conn = null;
+        }
+        catch(Exception $e){
+            die("Erreur : " . $e->getMessage());
+        }
 
-        $sql_nom = "SELECT surname FROM users";
-        $nom = $conn->prepare($sql_nom);
-        $nom->execute();
-        $surname = $nom->fetch();
-
-        $sql_email = "SELECT email FROM users";
-        $email = $conn->prepare($sql_email);
-        $email->execute();
-        $email = $email->fetch();
-
-        $sql_bd = "SELECT birth_date FROM users";
-        $bd = $conn->prepare($sql_bd);
-        $bd->execute();
-        $bd = $bd->fetch();
-
-        session_start();
-        $_SESSION['name'] = $name['name'];
-        $_SESSION['surname'] = $surname['surname'];
-        $_SESSION['email'] = $email['email'];
-        $_SESSION['birth-date'] = $bd['birth_date'];
+        $timestampBirthDate = strtotime($user['birth_date']);
+        $birthDate = date('l j F Y', $timestampBirthDate);
    ?>
     
     <main>
@@ -46,33 +43,46 @@
             <h1>Profil</h1>
             <div class="info-container">
                 <h3 class="info-label">Prénom:</h3>
-                <span class="info-value"><?php echo $_SESSION['name'];?></span>
+                <span class="info-value"><?php echo $user['name'];?></span>
             </div>
             <div class="info-container">
                 <h3 class="info-label">Nom:</h3>
-                <span class="info-value"><?php echo $_SESSION['surname'];?></span>
+                <span class="info-value"><?php echo $user['surname'];?></span>
             </div>
             <div class="info-container">
                 <h3 class="info-label">Adresse Mail:</h3>
-                <span class="info-value"><?php echo $_SESSION['email'];?></span>
+                <span class="info-value"><?php echo $user['email'];?></span>
             </div>
 
             <div class="info-container">
                 <h3 class="info-label">Date de naissance</h3>
-                <span class="info-value"><?php echo $_SESSION['birth-date'];?></span>
+                <span class="info-value"><?php echo $birthDate;?></span>
             </div>
 
-            <h2>Films Réservés :</h2>
-            </br><h2>Fimls Précedement Réservés :</h2>
+            <h2>Fimls Précedement Réservés :</h2>
+
+            <div class="lastMovies">
+                <img src="../images/grey.jpg" alt="Films précédemment réservés">
+                <img src="../images/grey.jpg" alt="Films précédemment réservés">
+                <img src="../images/grey.jpg" alt="Films précédemment réservés">
+                <img src="../images/grey.jpg" alt="Films précédemment réservés">
+                <img src="../images/grey.jpg" alt="Films précédemment réservés">
+                <img src="../images/grey.jpg" alt="Films précédemment réservés">
+            </div>
 
             <br>
-            <button type="submit" class="btn" >Changer de Mot de passe</button>
+            <form action="" method="post">
+                <button type="submit" class="btn" name="logout">Deconnexion</button>
+            </form>
         </div>
     </main>
 
     <?php
-            include 'footer.php';
+        if(isset($_POST['logout'])){
+            require("logout.php"); 
+        }
 
-        ?>
+        include 'footer.php';
+    ?>
 </body>
 </html>

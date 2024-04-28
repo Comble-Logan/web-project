@@ -1,6 +1,4 @@
 <?php
-    // Futur code lié a l'affichage du connexion ou profil dans le nav
-
     if(isset($isIndex)){
         // Chemins CSS
         $chemin_header_css = 'css/headerIndex.css';
@@ -11,6 +9,7 @@
         $chemin_accueil = '#';
         $chemin_contact = 'php/Page_Suggestion.php';
         $chemin_profil = 'php/Profil.php';
+        $chemin_gestion = 'php/gestion.php';
         $chemin_session = 'php/connexion.php';
         
     } else {
@@ -22,6 +21,7 @@
         // Chemins redirections
         $chemin_accueil = '../index.php';
         $chemin_contact = 'Page_Suggestion.php';
+        $chemin_gestion = 'gestion.php';
         $chemin_profil = 'Profil.php';
         $chemin_session = 'connexion.php';}
 ?>
@@ -37,13 +37,17 @@
             <ul>
                 <li class="nav-acceuil-page"> <a href="<?php echo $chemin_accueil; ?>">Accueil</a> </li>
                 <li class="nav-contact-page"> <a href="<?php echo $chemin_contact; ?>">Contact</a> </li>
-                <li class="nav-connect-page"> <a href="<?php
-                    if (!empty($_SESSION['user_id'])) {
-                        echo $chemin_session;
+                <?php
+                    if (isset($_SESSION['connected'])) {
+                        if ($_SESSION['isAdmin'] == 0) {
+                            echo "<li class=\"nav-connect-page\"> <a href=\"$chemin_profil\">Profil</a> </li>";
+                        } else {
+                            echo "<li class=\"nav-connect-page\"> <a href=\"$chemin_gestion\">Panel Admin</a> </li>";
+                        }
                     } else {
-                        echo $chemin_profil;
+                        echo "<li class=\"nav-connect-page\"> <a href=\"$chemin_session\">Connexion</a> </li>";
                     }
-                ?>">Profil</a> </li>
+                ?>
             </ul>
         </nav>
     </header>

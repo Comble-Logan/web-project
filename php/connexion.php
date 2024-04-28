@@ -16,7 +16,7 @@
 
     <main>
         <div class="wrapper">
-            <form action="login.php" method="POST">
+            <form action="" method="POST">
                 <h1>Connexion</h1>
                 <div class="input-box">
                 <label for="user_id"></label>
@@ -35,6 +35,11 @@
                     <p><a href="../php/Inscription.php">S'inscrire</a></p>
                 </div>
             </form>
+            <?php
+                if(isset($_POST['login'])) { 
+                    require("login.php");
+                }
+            ?>
         </div>
     </form>
     </main>
