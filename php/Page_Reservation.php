@@ -55,7 +55,7 @@
                     <form method="post" action="">
                     <p>date : <?php echo( $seance['date']) ?></p>
                     <p>heure : <?php echo( $seance['hourly']) ?></p>
-                         <br>
+                        <br>
                         <label for="status">Tarification :</label>
                         <select id="status" name="status">
                             <option value="5">Étudiant(e)</option>
@@ -92,7 +92,7 @@
 
                         }
                         else{
-                            echo ("<p style='color: red;'>Le nombre de place est trop élevés face au nombre place restantes</p>") ;
+                            echo ("<p style='color: red;'>Le nombre de place est trop élevé face au nombre de places restantes</p>") ;
                         }
                     }
                     ?>

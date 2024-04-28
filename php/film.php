@@ -75,7 +75,7 @@
 
                                 // On parcourt chaque ligne
                                 while ($row = $req->fetch()) {
-                                    $url = "page_reservation?idf=" . $row["movie_id"] . "&ids=" . $row["screening_id"];
+                                    $url = "Page_Reservation.php?idf=" . $row["movie_id"] . "&ids=" . $row["screening_id"];
                                     echo '<a href="' . $url . '">';
                                     echo '<div class="bloc">';
                                     setlocale(LC_TIME, 'fr_FR.utf8','fra'); 
