@@ -60,11 +60,11 @@
 				
                 <br><br>
 				<label>Nombre de places :</label>
-				<input type="number" name="NbPlaces" required>
+				<input type="number" name="NbPlaces" min="1" required>
 
 				<br><br>
 				<label>Numéro de la salle :</label>
-				<input type="number" name="numSalle" required>
+				<input type="number" name="numSalle" min="1" required>
 
                 <br><br>
 				<input type="submit" name="ajout" value="Ajouter"/>
