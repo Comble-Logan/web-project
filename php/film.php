@@ -21,13 +21,13 @@
 <html lang="fr">
     <head>
     <meta charset="UTF-8">
-    <meta name="Film" content="Page Dune">
+    <meta name="Film" content="Page Film">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="star, wars, science-fiction, cinema, septième, art, films, retro"> <!-- Mots-clés référencement-->
+        <meta name="keywords" content="science-fiction, cinema, septième, art, films, retro"> <!-- Mots-clés référencement-->
         <meta name="author" content="Audrey Vasseur">
         <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
         <link rel="stylesheet" type="text/css" href="../css/film.css">
-        <title>Dune</title>
+        <title><?php echo $film['name']; ?></title>
     
         <?php
             include 'header.php';
