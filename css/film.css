@@ -105,7 +105,12 @@ body, html {
     display: inline-block;
     margin: 10px;
     font-size: 20px; /* Reset font-size */
-    
+    text-decoration: none;
+}
+
+#calendar .bloc:visited{
+    text-decoration: none;
+    color:white;
 }
 
 #calendar .bloc:hover {
@@ -198,6 +203,13 @@ body, html {
         width: 35%; /* Les blocs prendront 45% de la largeur de l'écran, permettant d'afficher deux blocs côte à côte */
         margin: 2.5%; /* Ajoute une marge autour des blocs pour créer un espace entre eux */  
         font-size: 20px;
+        text-decoration: none;
     }
+
+    #calendar .bloc:visited{
+        text-decoration: none;
+        color:white;
+    }
+
     #calendar .bloc:active {
         background-color: #dcb098f7;}}
