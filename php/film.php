@@ -1,4 +1,5 @@
-<?php
+<?
+    session_start();
     require 'connBDD.php';
 
     // Récupération de l'ID du film depuis l'URL ou une autre source
@@ -75,15 +76,20 @@
 
                                 // On parcourt chaque ligne
                                 while ($row = $req->fetch()) {
-                                    // Redirection vers la page de réservation correspondante
+                                    // Création de l'url de redirection vers la page de réservation correspondante
                                     $url = "Page_Reservation.php?idf=" . $row["movie_id"] . "&ids=" . $row["screening_id"];
-                                    echo '<a href="' . $url . '">';
-
+                                    
                                     echo '<div class="bloc">';
                                     setlocale(LC_TIME, 'fr_FR.utf8','fra'); 
                                     echo strftime("%A %d %B", strtotime($row["date"])) . "<br>";  // affichage du jour 
                                     echo date('H:i', strtotime($row["hourly"])) . "<br>";  // affichage de l'heure (sans les secondes)
                                     echo "Salle " . $row["salle"];  // affichage du numéro de la salle
+                                    
+                                    // On vérifie si l'utilisateur est connecté
+                                    if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) {
+                                        // Si c'est le cas, on redirige vers la page de réservation
+                                        echo '<a href="' . $url . '">';
+                                    } 
                                     echo "</div><br>";  
                                 }
                             ?> 
