@@ -1,4 +1,5 @@
-.container {  display: grid;
+.container {  
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: (3,1fr);
     grid-auto-columns: 1fr;
@@ -197,7 +198,5 @@ body, html {
         margin: 2.5%; /* Ajoute une marge autour des blocs pour créer un espace entre eux */  
         font-size: 20px;
     }
-
     #calendar .bloc:active {
-        background-color: #dcb098f7;
-    }
+        background-color: #dcb098f7;}}

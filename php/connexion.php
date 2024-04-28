@@ -20,8 +20,8 @@
                 <h1>Connexion</h1>
                 <div class="input-box">
                 <label for="user_id"></label>
-                    <input type="text" id="user_id" name="user_id" placeholder="Identifiant" required>
-                    <i class='bx bxs-user'></i>
+                    <input type="text" id="user_id" name="user_id" placeholder="Email" required>
+                    <i class='bx bx-envelope'></i>
                 </div>
                 <div class="input-box">
                     <label for="password"></label>

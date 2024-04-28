@@ -16,22 +16,18 @@
     
     <main>
         <div class="wrapper">
-            <form action="submit.php" method="post">
+            <form action="" method="post">
                 <h1>Inscription</h1>
                 <div class="input-box">
-                    <label for="user_id"></label>
-                    <input type="text" id="user_id" name="user_id" placeholder="Identifiant" required>
-                    <i class='bx bxs-user'></i>
+                    <label for="email"></label>
+                    <input type="text" id="email" name="email" placeholder="Email" required>
+                    <i class='bx bx-envelope'></i>
                 </div>
+
                 <div class="input-box">
                     <label for="password"></label>
                     <input type="password" id="password" name="password" placeholder="Mot de passe" required>
                     <i class='bx bxs-lock-alt'></i>
-                </div>
-
-                <div class="input-box">
-                    <label for="email"></label>
-                    <input type="text" id="email" name="email" placeholder="Email" required>
                 </div>
 
                 <div class="input-box">
@@ -50,7 +46,12 @@
                 </div>
 
                 <button type="submit" value="M'inscrire" class="btn" name="ok">S'inscrire</button>
-</form>
+            </form>
+            <?php
+                if(isset($_POST['ok'])) { 
+                    require("submit.php");
+                }
+            ?>
     </main>
 
 

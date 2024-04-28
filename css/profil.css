@@ -48,3 +48,19 @@ main a img {
 h3{
     width: 15%;
 }
+
+.wrapper img {
+    width: 25%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 5%;
+}
+@media screen and (max-width: 768px) {
+    .wrapper img {
+        width: 35%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        margin-right: 5%;
+}}
