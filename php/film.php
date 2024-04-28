@@ -69,9 +69,9 @@
                                 $currentTime = time();
 
                                 // Préparez la requête SQL
-                                $request = "SELECT * FROM screenings WHERE date >= CURDATE() ORDER BY date ASC";
+                                $request = "SELECT * FROM screenings WHERE date >= CURDATE() AND movie_id = :movie_id ORDER BY date ASC";
                                 $req = $conn->prepare($request);
-                                $req->execute();
+                                $req->execute(['movie_id' => $film['movie_id']]);  // on veut vérifier qu'on soit sur le bon film
 
                                 // On parcourt chaque ligne
                                 while ($row = $req->fetch()) {
