@@ -9,9 +9,16 @@
     $user_id = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="profil" content="Contact">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Monnehay">
+    <link rel="icon" type="image/x-icon" href="../images/logo-final.ico">
     <link rel="stylesheet" type="text/css" href="../css/Page_paiement.css">
+    <title>Le Septième Art</title>
+
     <?php
         include 'header.php';
     ?>
