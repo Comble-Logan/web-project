@@ -189,11 +189,17 @@
 			}				
 		?>
 
-        <br>
-	
+		<br>
+		<form action="" method="post">
+                <button type="submit" class="deconnexion" name="logout">Deconnexion</button>
+        </form>
+		<br>	
 		</main>
 
 		<?php
+			if(isset($_POST['logout'])){
+				require("logout.php"); 
+			}
             include 'footer.php';
         ?>
 	 </body>	
